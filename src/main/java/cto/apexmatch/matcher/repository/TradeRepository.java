@@ -17,4 +17,10 @@ public interface TradeRepository extends JpaRepository<Trade, Long> {
 
     // Find all trades for a user (as buyer or seller)
     List<Trade> findByBuyOrder_UserIdOrSellOrder_UserIdOrderByTimestampDesc(Long buyUserId, Long sellUserId);
+
+    // Find trades by buy order ID
+    List<Trade> findByBuyOrderIdOrderByTimestampDesc(Long buyOrderId);
+
+    // Find trades by sell order ID
+    List<Trade> findBySellOrderIdOrderByTimestampDesc(Long sellOrderId);
 }

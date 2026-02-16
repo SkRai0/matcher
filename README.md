@@ -304,11 +304,12 @@ matcher/
 - [x] Custom UserDetails service
 - [x] Global exception handler
 
-### Phase 3: Core Business Logic (UPCOMING)
-- [ ] Order book implementation
-- [ ] Matching engine
-- [ ] Trade service with balance updates
-- [ ] Concurrency control
+### Phase 3: Core Business Logic ✅ COMPLETE
+- [x] Order book implementation (TreeMap-based with price-time priority)
+- [x] Matching engine with O(log n) complexity
+- [x] Trade service with balance updates
+- [x] Concurrency control (ReentrantLock per symbol)
+- [x] Order service for high-level management
 
 ### Phase 4: API Layer (UPCOMING)
 - [ ] Order controller
@@ -407,4 +408,4 @@ MIT License - See LICENSE file for details
 
 **Last Updated**: February 16, 2026  
 **Version**: 0.0.1-SNAPSHOT  
-**Status**: Phase 2 Complete (Security & JWT), Phase 3 Next (Core Business Logic)
+**Status**: Phase 3 Complete (Core Business Logic), Phase 4 Next (API Layer)
